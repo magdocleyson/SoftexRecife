@@ -1,0 +1,47 @@
+#Calculadora com opções
+
+def calculadora(num1,num2,op):
+  if op == 1:
+    resultado = num1 + num2
+  elif op == 2:
+    resultado = num1 - num2
+  elif op == 3:
+    resultado = num1 * num2
+  elif op == 4:
+    resultado = num1 / num2
+  
+  return resultado
+
+op = 1
+
+while (op != 0):
+ print("Calculadora")
+ print("Escolha uma OPÇÃO: \n 1-SOMA \n 2-SUBTRAÇÃO \n 3-MULTIPLICAÇÃO \n 4-DIVISÃO \n 0-SAIR")
+ op = int(input())
+
+ if op >=1 and op <=4:
+
+   print("Digite o primeiro numero:")
+   num1 = int(input())
+   print("Digite o segundo numero:")
+   num2 = int(input())
+
+   res = calculadora(num1,num2,op)
+  
+ if op == 1:
+    print("O resultado de", num1, "+", num2,"=", res)
+    print("\n------------------------------------\n")
+ elif op == 2:
+    print("O resultado de", num1, "-", num2,"=", res)
+    print("\n------------------------------------\n")
+ elif op == 3:
+    print("O resultado de", num1, "x", num2,"=", res)
+    print("\n------------------------------------\n")
+ elif op == 4:
+    print("O resultado de", num1, "÷", num2,"=", res)
+    print("\n------------------------------------\n")
+ elif op > 4:
+    print("Essa opção não existe")
+    print("\n------------------------------------\n")
+if op == 0:
+  print("Saindo da Calculadora")
